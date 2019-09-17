@@ -7,10 +7,12 @@ node {
 
         checkout scm
     }
-
+   
     stage('Build') {
-            sh 'mvn -B -DskipTests clean package'
-           }
+         withMaven(maven: 'Maven 3') {
+            sh 'mvn clean package'
+        }
+    }
     
     stage('Build image') {
         /* This builds the actual image; synonymous to
