@@ -7,7 +7,7 @@ node {
         checkout scm
     }
 
-    stage('maven package'){
+    stage('Build'){
         steps{
               sh 'mvn clean && mvn package'
         }
