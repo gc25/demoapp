@@ -1,7 +1,7 @@
 FROM pradyroy/alpine-openjdk-12.0.2:1.0
 VOLUME /tmp /var/applogs
 ARG DEPENDENCY=target/dependency
-RUN mkdir ${DEPENDENCY}
+RUN mkdir -p ${DEPENDENCY}
 COPY ${DEPENDENCY}/BOOT-INF/lib/ app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
