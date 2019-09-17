@@ -8,7 +8,9 @@ node {
     }
 
     stage('maven package'){
-        sh 'mvn clean && mvn package'
+        steps{
+              sh 'mvn clean && mvn package'
+        }
     }
     stage('Build image') {
         /* This builds the actual image; synonymous to
