@@ -9,10 +9,8 @@ node {
     }
 
     stage('Build') {
-       steps {
             sh 'mvn -B -DskipTests clean package'
            }
-    }
     
     stage('Build image') {
         /* This builds the actual image; synonymous to
