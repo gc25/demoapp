@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("gc25/testdemoapp")
+        app = docker.build("gc25/demoapp")
     }
 
     stage('Test image') {
