@@ -11,7 +11,7 @@ node {
     }
    
     stage('Build') {
-        maven(maven: 'Maven 3') {
+         withMaven(maven: 'Maven 3') {
             sh 'mvn clean package'
         }
     }
