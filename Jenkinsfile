@@ -22,8 +22,7 @@ node {
               sh 'mvn clean package'
              
            }
-       }
-    }
+     }
 
      stage('Build image') {
        /* This builds the actual image; synonymous to
