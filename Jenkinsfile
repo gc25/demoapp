@@ -19,7 +19,7 @@ node {
         // or globally to the entire master navigating to  "Manage Jenkins / Global Tools Configuration"
         )
             {
-              sh 'mvn -e clean package'
+              sh 'mvn clean package'
              
            }
      }
